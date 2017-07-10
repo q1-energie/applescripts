@@ -11,7 +11,7 @@ on open droppedItems
 			set ext to name extension of current
 			set extension hidden of current to was_hidden
 		end tell
-		set target to ((POSIX path of theOutputFolder) as string) & "/" & currentWithout & ".pdf"
+		set target to (theOutputFolder as text) & currentWithout & ".pdf"
 		if (ext = "doc") or (ext = "docx") then
 			saveWordAsPDF(current, target)
 		else if (ext = "xls") or (ext = "xlsx") then
